@@ -1,0 +1,1 @@
+# Placeholder for ground_truth.py

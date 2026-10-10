@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	font-family: 'DM Sans', 'Avenir Next', sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	color-scheme: dark;
+	background: #020617;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-width: 320px;
+	min-height: 100%;
+	background: #020617;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+	background:
+		radial-gradient(ellipse at 12% 0%, rgb(49 46 129 / 18%), transparent 38%),
+		radial-gradient(ellipse at 100% 90%, rgb(8 145 178 / 10%), transparent 34%),
+		#020617;
+}
+
+button,
+input,
+select {
+	font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+	outline: 2px solid rgb(34 211 238 / 75%);
+	outline-offset: 2px;
+}
+
+::selection {
+	color: #ecfeff;
+	background: rgb(99 102 241 / 55%);
+}
+
+.recruiter-readable [class*="text-sm"] {
+	font-size: 1rem !important;
+}
+
+.recruiter-readable [class*="text-xs"] {
+	font-size: 0.9375rem !important;
+}
+
+.recruiter-readable [class*="text-[9px]"],
+.recruiter-readable [class*="text-[10px]"],
+.recruiter-readable [class*="text-[11px]"],
+.recruiter-readable [class*="text-[12px]"],
+.recruiter-readable [class*="text-[13px]"] {
+	font-size: 0.875rem !important;
+}
+
+.recruiter-readable [aria-label="Candidate pitch"] pre {
+	font-size: 1rem !important;
+	line-height: 1.6 !important;
+}
+
+@keyframes ring {
+	0%, 100% { transform: rotate(0deg); }
+	8% { transform: rotate(18deg); }
+	16% { transform: rotate(-16deg); }
+	24% { transform: rotate(12deg); }
+	32% { transform: rotate(-10deg); }
+	40% { transform: rotate(6deg); }
+	48% { transform: rotate(-4deg); }
+	56% { transform: rotate(0deg); }
+}
+
+.notification-bell:hover .notification-bell-icon {
+	animation: ring 700ms ease-in-out;
+	transform-origin: top center;
+}
+
+.notification-bell.has-unread .notification-bell-icon {
+	animation: ring 1.8s ease-in-out infinite;
+	transform-origin: top center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.notification-bell:hover .notification-bell-icon,
+	.notification-bell.has-unread .notification-bell-icon {
+		animation: none;
+	}
+}

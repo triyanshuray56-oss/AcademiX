@@ -1,0 +1,50 @@
+﻿# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python environments and cache
+venv/
+.venv/
+backend/venv/
+**/venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Local databases and backups
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+
+# Frontend dependencies and builds
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test output
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Exclude local backups, patches, and audit output
+campuslink.db.test-backup-*
+*.db.test-backup-*
+*.patch
+recruiter_audit.txt
+tatus

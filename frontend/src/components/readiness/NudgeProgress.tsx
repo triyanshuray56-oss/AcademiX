@@ -1,0 +1,1 @@
+// Placeholder for NudgeProgress.tsx
